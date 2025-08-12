@@ -2,40 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Professional Dutch Law Firm Design System */
 
 @layer base {
   :root {
+    /* Core brand colors - Professional law firm palette */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
-
+    --foreground: 220 26% 14%;
+    
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
+    --card-foreground: 220 26% 14%;
+    
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
-
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
+    --popover-foreground: 220 26% 14%;
+    
+    /* Primary - Deep professional navy */
+    --primary: 217 32% 17%;
+    --primary-foreground: 0 0% 98%;
+    
+    /* Secondary - Warm professional grey */
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 26% 14%;
+    
+    /* Muted tones for subtle elements */
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 8.5% 46%;
+    
+    /* Accent - Subtle blue for highlights */
+    --accent: 214 32% 91%;
+    --accent-foreground: 217 32% 17%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 217 32% 17%;
+    
+    /* Trust colors - Gold accent for credentials */
+    --trust: 45 93% 58%;
+    --trust-foreground: 45 86% 11%;
+    
+    /* Professional gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 32% 17%) 0%, hsl(220 26% 14%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 100%);
+    
+    /* Professional shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(217 32% 17% / 0.1);
+    --shadow-card: 0 4px 6px -1px hsl(220 26% 14% / 0.1);
+    
+    /* Typography scale */
+    --font-heading: 'Merriweather', serif;
+    --font-body: 'Open Sans', sans-serif;
+    
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
