@@ -1,0 +1,15 @@
+# SPA fallback for Netlify
+/*    /index.html   200
+
+# Specific routes with proper status codes
+/ondernemers /index.html 200
+/particulieren /index.html 200
+/mediation /index.html 200
+/over-ons /index.html 200
+/contact /index.html 200
+/nieuws /index.html 200
+/rechtsgebieden/familierecht /index.html 200
+/rechtsgebieden/arbeidsrecht /index.html 200
+/rechtsgebieden/strafrecht /index.html 200
+/rechtsgebieden/huurrecht /index.html 200
+/rechtsgebieden/contractenrecht /index.html 200

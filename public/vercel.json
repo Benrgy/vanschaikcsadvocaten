@@ -1,0 +1,52 @@
+{
+  "rewrites": [
+    {
+      "source": "/ondernemers",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/particulieren",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/mediation",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/over-ons",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/nieuws",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/rechtsgebieden/familierecht",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/rechtsgebieden/arbeidsrecht",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/rechtsgebieden/strafrecht",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/rechtsgebieden/huurrecht",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/rechtsgebieden/contractenrecht",
+      "destination": "/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
