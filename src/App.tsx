@@ -13,6 +13,7 @@ import Mediation from "./pages/Mediation";
 import OverOns from "./pages/OverOns";
 import Contact from "./pages/Contact";
 import Nieuws from "./pages/Nieuws";
+import Privacy from "./pages/Privacy";
 import Familierecht from "./pages/rechtsgebieden/Familierecht";
 import Arbeidsrecht from "./pages/rechtsgebieden/Arbeidsrecht";
 import Strafrecht from "./pages/rechtsgebieden/Strafrecht";
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/over-ons" element={<OverOns />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/nieuws" element={<Nieuws />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/rechtsgebieden/familierecht" element={<Familierecht />} />
           <Route path="/rechtsgebieden/arbeidsrecht" element={<Arbeidsrecht />} />
           <Route path="/rechtsgebieden/strafrecht" element={<Strafrecht />} />

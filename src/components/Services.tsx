@@ -7,37 +7,43 @@ const Services = () => {
       icon: Heart,
       title: "Familierecht",
       description: "Echtscheiding, kinderalimentatie, voogdij en partnerschap kwesties.",
-      color: "bg-red-50 text-red-600"
+      colorBg: "bg-service-family-bg",
+      colorText: "text-service-family"
     },
     {
       icon: Briefcase,
       title: "Arbeidsrecht",
       description: "Arbeidscontracten, ontslag, arbeidsconflicten en werknemersrechten.",
-      color: "bg-blue-50 text-blue-600"
+      colorBg: "bg-service-employment-bg",
+      colorText: "text-service-employment"
     },
     {
       icon: Scale,
       title: "Strafrecht",
       description: "Verdediging in strafzaken, boetes en juridische bijstand.",
-      color: "bg-purple-50 text-purple-600"
+      colorBg: "bg-service-criminal-bg",
+      colorText: "text-service-criminal"
     },
     {
       icon: Home,
       title: "Huurrecht",
       description: "Huurcontracten, huurproblemen en geschillen tussen huurder en verhuurder.",
-      color: "bg-green-50 text-green-600"
+      colorBg: "bg-service-rental-bg",
+      colorText: "text-service-rental"
     },
     {
       icon: FileText,
       title: "Contractenrecht",
       description: "Opstellen, beoordelen en onderhandelen van zakelijke contracten.",
-      color: "bg-orange-50 text-orange-600"
+      colorBg: "bg-service-contract-bg",
+      colorText: "text-service-contract"
     },
     {
       icon: Users,
       title: "Mediation",
       description: "Geschillenbeslechting door middel van mediation en bemiddeling.",
-      color: "bg-indigo-50 text-indigo-600"
+      colorBg: "bg-service-mediation-bg",
+      colorText: "text-service-mediation"
     }
   ];
 
@@ -56,10 +62,10 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((service, index) => (
-            <Card key={index} className="shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 cursor-pointer">
+            <Card key={index} className="shadow-professional hover:shadow-professional-hover transition-all duration-300 hover:-translate-y-1 cursor-pointer border-2 hover:border-primary/20">
               <CardHeader className="text-center pb-4">
-                <div className={`mx-auto p-4 rounded-full w-fit mb-3 ${service.color}`}>
-                  <service.icon className="h-6 w-6" />
+                <div className={`mx-auto p-4 rounded-full w-fit mb-3 ${service.colorBg}`}>
+                  <service.icon className={`h-6 w-6 ${service.colorText}`} />
                 </div>
                 <CardTitle className="text-xl font-heading">{service.title}</CardTitle>
               </CardHeader>

@@ -18,6 +18,15 @@ export const seoConfigs: Record<string, SEOConfig> = {
     twitterTitle: 'Van Schaik C.S. Advocaten - Juridische Experts',
     twitterDescription: 'Betrouwbare juridische dienstverlening sinds 1983. Persoonlijke begeleiding bij al uw juridische vraagstukken.'
   },
+  '/privacy': {
+    title: 'Privacyverklaring - Van Schaik C.S. Advocaten',
+    description: 'Lees onze privacyverklaring en ontdek hoe Van Schaik C.S. Advocaten omgaat met uw persoonsgegevens en privacy.',
+    keywords: 'privacyverklaring, privacy, persoonsgegevens, AVG, GDPR, Van Schaik advocaten',
+    ogTitle: 'Privacyverklaring - Van Schaik C.S. Advocaten',
+    ogDescription: 'Informatie over hoe wij omgaan met uw persoonsgegevens en privacy.',
+    twitterTitle: 'Privacyverklaring - Van Schaik C.S.',
+    twitterDescription: 'Privacyverklaring van Van Schaik C.S. Advocaten.'
+  },
   '/ondernemers': {
     title: 'Juridische Diensten voor Ondernemers - Van Schaik C.S. Advocaten',
     description: 'Specialistische juridische ondersteuning voor ondernemers. Arbeidsrecht, contractenrecht, ondernemingsrecht en incasso. Ervaring sinds 1983.',

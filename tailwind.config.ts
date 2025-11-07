@@ -30,7 +30,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -39,6 +40,10 @@ export default {
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
+				},
+				success: {
+					DEFAULT: 'hsl(var(--success))',
+					foreground: 'hsl(var(--success-foreground))'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
@@ -58,7 +63,22 @@ export default {
 				},
 				trust: {
 					DEFAULT: 'hsl(var(--trust))',
-					foreground: 'hsl(var(--trust-foreground))'
+					foreground: 'hsl(var(--trust-foreground))',
+					light: 'hsl(var(--trust-light))'
+				},
+				service: {
+					family: 'hsl(var(--service-family))',
+					'family-bg': 'hsl(var(--service-family-bg))',
+					employment: 'hsl(var(--service-employment))',
+					'employment-bg': 'hsl(var(--service-employment-bg))',
+					criminal: 'hsl(var(--service-criminal))',
+					'criminal-bg': 'hsl(var(--service-criminal-bg))',
+					rental: 'hsl(var(--service-rental))',
+					'rental-bg': 'hsl(var(--service-rental-bg))',
+					contract: 'hsl(var(--service-contract))',
+					'contract-bg': 'hsl(var(--service-contract-bg))',
+					mediation: 'hsl(var(--service-mediation))',
+					'mediation-bg': 'hsl(var(--service-mediation-bg))'
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',

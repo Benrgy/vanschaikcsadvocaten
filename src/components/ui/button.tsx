@@ -9,22 +9,24 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
+        default: "bg-primary text-primary-foreground hover:bg-primary-hover shadow-md hover:shadow-lg",
         destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
+          "bg-destructive text-destructive-foreground hover:bg-destructive/90 shadow-sm",
         outline:
-          "border border-primary bg-background text-primary hover:bg-primary hover:text-primary-foreground shadow-sm",
+          "border-2 border-primary bg-background text-primary hover:bg-primary hover:text-primary-foreground shadow-sm hover:shadow-md transition-all",
         secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
+          "bg-secondary text-secondary-foreground hover:bg-secondary/80 shadow-sm",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-primary text-primary-foreground hover:bg-primary/95 shadow-md hover:shadow-lg transform hover:-translate-y-0.5 font-semibold",
-        professional: "bg-white text-primary border-2 border-primary hover:bg-primary hover:text-primary-foreground shadow-sm hover:shadow-md",
+        hero: "bg-trust text-trust-foreground hover:bg-trust/90 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 font-semibold text-lg",
+        professional: "bg-white text-primary border-2 border-primary hover:bg-primary hover:text-primary-foreground shadow-md hover:shadow-lg font-semibold",
+        accent: "bg-accent text-accent-foreground hover:bg-accent/90 shadow-md hover:shadow-lg font-semibold",
       },
       size: {
-        default: "h-10 px-4 py-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
+        default: "h-10 px-4 py-2 text-sm",
+        sm: "h-9 rounded-md px-3 text-sm",
+        lg: "h-12 rounded-lg px-8 text-base",
+        xl: "h-14 rounded-lg px-10 text-lg",
         icon: "h-10 w-10",
       },
     },

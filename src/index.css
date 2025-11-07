@@ -8,54 +8,81 @@
   :root {
     /* Core brand colors - Professional law firm palette */
     --background: 0 0% 100%;
-    --foreground: 220 26% 14%;
+    --foreground: 215 25% 17%;
     
     --card: 0 0% 100%;
-    --card-foreground: 220 26% 14%;
+    --card-foreground: 215 25% 17%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 220 26% 14%;
+    --popover-foreground: 215 25% 17%;
     
-    /* Primary - Deep professional navy */
-    --primary: 217 32% 17%;
-    --primary-foreground: 0 0% 98%;
+    /* Primary - Professional navy blue for authority and trust */
+    --primary: 215 60% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 215 60% 20%;
     
-    /* Secondary - Warm professional grey */
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 220 26% 14%;
+    /* Secondary - Professional blue-grey for subtle accents */
+    --secondary: 215 20% 92%;
+    --secondary-foreground: 215 25% 17%;
     
-    /* Muted tones for subtle elements */
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 8.5% 46%;
+    /* Muted tones for backgrounds and subtle elements */
+    --muted: 215 20% 96%;
+    --muted-foreground: 215 15% 45%;
     
-    /* Accent - Subtle blue for highlights */
-    --accent: 214 32% 91%;
-    --accent-foreground: 217 32% 17%;
+    /* Accent - Warm gold for trust and prestige */
+    --accent: 35 85% 55%;
+    --accent-foreground: 35 85% 15%;
     
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 98%;
+    /* Success - Professional green for positive actions */
+    --success: 145 55% 40%;
+    --success-foreground: 0 0% 100%;
     
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 217 32% 17%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
     
-    /* Trust colors - Gold accent for credentials */
-    --trust: 45 93% 58%;
-    --trust-foreground: 45 86% 11%;
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 215 60% 25%;
+    
+    /* Trust colors - Premium gold for credentials and awards */
+    --trust: 35 85% 55%;
+    --trust-foreground: 35 85% 15%;
+    --trust-light: 35 85% 95%;
+    
+    /* Service area colors - Professional palette */
+    --service-family: 340 65% 45%;
+    --service-family-bg: 340 65% 97%;
+    --service-employment: 210 70% 45%;
+    --service-employment-bg: 210 70% 97%;
+    --service-criminal: 270 50% 45%;
+    --service-criminal-bg: 270 50% 97%;
+    --service-rental: 150 55% 40%;
+    --service-rental-bg: 150 55% 97%;
+    --service-contract: 25 75% 50%;
+    --service-contract-bg: 25 75% 97%;
+    --service-mediation: 240 60% 50%;
+    --service-mediation-bg: 240 60% 97%;
     
     /* Professional gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 32% 17%) 0%, hsl(220 26% 14%) 100%);
-    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(220 14% 96%) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(215 60% 25%) 0%, hsl(215 60% 18%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 20% 97%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(35 85% 55%) 0%, hsl(35 85% 48%) 100%);
     
-    /* Professional shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(217 32% 17% / 0.1);
-    --shadow-card: 0 4px 6px -1px hsl(220 26% 14% / 0.1);
+    /* Professional shadows - Enhanced for depth */
+    --shadow-sm: 0 1px 2px 0 hsl(215 25% 17% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(215 25% 17% / 0.1), 0 2px 4px -2px hsl(215 25% 17% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(215 25% 17% / 0.1), 0 4px 6px -4px hsl(215 25% 17% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(215 25% 17% / 0.15), 0 8px 10px -6px hsl(215 25% 17% / 0.1);
+    --shadow-card: 0 4px 12px hsl(215 25% 17% / 0.08);
+    --shadow-card-hover: 0 8px 24px hsl(215 25% 17% / 0.12);
     
     /* Typography scale */
     --font-heading: 'Merriweather', serif;
     --font-body: 'Open Sans', sans-serif;
     
+    /* Professional spacing and sizing */
     --radius: 0.5rem;
+    --radius-lg: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -119,6 +146,28 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+  
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer utilities {
+  .shadow-professional {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-professional-hover {
+    box-shadow: var(--shadow-card-hover);
+  }
+  
+  .text-balance {
+    text-wrap: balance;
   }
 }
