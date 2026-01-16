@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { SEOWrapper } from "./components/SEOWrapper";
 import Index from "./pages/Index";
@@ -28,26 +28,26 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter>
+        <HashRouter>
           <SEOWrapper>
             <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/ondernemers" element={<Ondernemers />} />
-          <Route path="/particulieren" element={<Particulieren />} />
-          <Route path="/mediation" element={<Mediation />} />
-          <Route path="/over-ons" element={<OverOns />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/nieuws" element={<Nieuws />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/rechtsgebieden/familierecht" element={<Familierecht />} />
-          <Route path="/rechtsgebieden/arbeidsrecht" element={<Arbeidsrecht />} />
-          <Route path="/rechtsgebieden/strafrecht" element={<Strafrecht />} />
-          <Route path="/rechtsgebieden/huurrecht" element={<Huurrecht />} />
-          <Route path="/rechtsgebieden/contractenrecht" element={<Contractenrecht />} />
-          <Route path="*" element={<NotFound />} />
+              <Route path="/" element={<Index />} />
+              <Route path="/ondernemers" element={<Ondernemers />} />
+              <Route path="/particulieren" element={<Particulieren />} />
+              <Route path="/mediation" element={<Mediation />} />
+              <Route path="/over-ons" element={<OverOns />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/nieuws" element={<Nieuws />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/rechtsgebieden/familierecht" element={<Familierecht />} />
+              <Route path="/rechtsgebieden/arbeidsrecht" element={<Arbeidsrecht />} />
+              <Route path="/rechtsgebieden/strafrecht" element={<Strafrecht />} />
+              <Route path="/rechtsgebieden/huurrecht" element={<Huurrecht />} />
+              <Route path="/rechtsgebieden/contractenrecht" element={<Contractenrecht />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </SEOWrapper>
-        </BrowserRouter>
+        </HashRouter>
       </TooltipProvider>
     </HelmetProvider>
   </QueryClientProvider>

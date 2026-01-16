@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet-async";
 import { seoConfigs, getDefaultSEO } from "@/utils/seoConfig";
 import { useEffect } from "react";
 
+// Base URL for GitHub Pages - change this when deploying to a different domain
+const BASE_URL = 'https://benrgy.github.io/vanschaikcsadvocaten';
+
 export const SEOWrapper = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
   const seoConfig = seoConfigs[location.pathname] || getDefaultSEO();
@@ -11,6 +14,9 @@ export const SEOWrapper = ({ children }: { children: React.ReactNode }) => {
   useEffect(() => {
     document.title = seoConfig.title;
   }, [seoConfig.title]);
+
+  // For hash-based routing, we use the base URL for canonical
+  const canonicalPath = location.pathname === '/' ? '' : `/#${location.pathname}`;
 
   return (
     <>
@@ -21,16 +27,16 @@ export const SEOWrapper = ({ children }: { children: React.ReactNode }) => {
         <meta name="robots" content="index, follow" />
         <meta name="author" content="Van Schaik C.S. Advocaten" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href={`https://vanschaikcs.nl${location.pathname}`} />
+        <link rel="canonical" href={`${BASE_URL}${canonicalPath}`} />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content={seoConfig.ogTitle} />
         <meta property="og:description" content={seoConfig.ogDescription} />
-        <meta property="og:url" content={`https://vanschaikcs.nl${location.pathname}`} />
+        <meta property="og:url" content={`${BASE_URL}${canonicalPath}`} />
         <meta property="og:site_name" content="Van Schaik C.S. Advocaten" />
         <meta property="og:locale" content="nl_NL" />
-        <meta property="og:image" content="https://vanschaikcs.nl/og-image.jpg" />
+        <meta property="og:image" content={`${BASE_URL}/og-image.jpg`} />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:image:alt" content="Van Schaik C.S. Advocaten - Juridische Dienstverlening" />
@@ -39,7 +45,7 @@ export const SEOWrapper = ({ children }: { children: React.ReactNode }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={seoConfig.twitterTitle} />
         <meta name="twitter:description" content={seoConfig.twitterDescription} />
-        <meta name="twitter:image" content="https://vanschaikcs.nl/og-image.jpg" />
+        <meta name="twitter:image" content={`${BASE_URL}/og-image.jpg`} />
         <meta name="twitter:image:alt" content="Van Schaik C.S. Advocaten" />
         
         {/* Local Business Schema */}
@@ -49,7 +55,7 @@ export const SEOWrapper = ({ children }: { children: React.ReactNode }) => {
             "@type": "LegalService",
             "name": "Van Schaik C.S. Advocaten",
             "description": "Advocatenkantoor gespecialiseerd in familie-, arbeids-, straf-, huur- en contractenrecht",
-            "url": "https://vanschaikcs.nl",
+            "url": BASE_URL,
             "telephone": "+31-10-5120409",
             "faxNumber": "+31-10-5120410",
             "email": "info@vanschaikcs.nl",
