@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <title>Van Schaik C.S. Advocaten</title>
+  <script>
+    // GitHub Pages SPA redirect
+    // Converts path-based URLs to hash-based URLs for React Router
+    var repo = '/vanschaikcsadvocaten';
+    var path = window.location.pathname;
+    
+    // Remove the repo prefix from the path
+    if (path.startsWith(repo)) {
+      path = path.substring(repo.length);
+    }
+    
+    // Redirect to the hash-based route
+    var newUrl = window.location.origin + repo + '/#' + (path || '/');
+    window.location.replace(newUrl);
+  </script>
+</head>
+<body>
+  <noscript>
+    <p>JavaScript is vereist voor deze website. <a href="https://benrgy.github.io/vanschaikcsadvocaten/">Ga naar de homepagina</a></p>
+  </noscript>
+  <p>Doorverwijzen...</p>
+</body>
+</html>
