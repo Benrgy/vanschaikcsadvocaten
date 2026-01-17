@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet-async";
 import { seoConfigs, getDefaultSEO } from "@/utils/seoConfig";
 import { useEffect } from "react";
 
-// Base URL for GitHub Pages - change this when deploying to a different domain
-const BASE_URL = 'https://benrgy.github.io/vanschaikcsadvocaten';
+// Base URL for Lovable hosting
+const BASE_URL = 'https://vanschaikcsadvocaten.lovable.app';
 
 export const SEOWrapper = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation();
@@ -15,8 +15,8 @@ export const SEOWrapper = ({ children }: { children: React.ReactNode }) => {
     document.title = seoConfig.title;
   }, [seoConfig.title]);
 
-  // For hash-based routing, we use the base URL for canonical
-  const canonicalPath = location.pathname === '/' ? '' : `/#${location.pathname}`;
+  // Clean URLs for Lovable hosting
+  const canonicalPath = location.pathname === '/' ? '' : location.pathname;
 
   return (
     <>
