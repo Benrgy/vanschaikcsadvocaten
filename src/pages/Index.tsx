@@ -1,9 +1,11 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import Story from "@/components/Story";
 import ProfessionalBadge from "@/components/ProfessionalBadge";
 import WhoWeHelp from "@/components/WhoWeHelp";
 import Services from "@/components/Services";
+import Journey from "@/components/Journey";
 import QuickContact from "@/components/QuickContact";
 import Team from "@/components/Team";
 import Testimonials from "@/components/Testimonials";
@@ -18,11 +20,13 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-8 relative z-10">
+        <TrustBar />
+        <Story />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
           <ProfessionalBadge />
         </div>
-        <TrustBar />
         <WhoWeHelp />
+        <Journey />
         <Services />
         <QuickContact />
         <Team />
